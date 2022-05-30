@@ -1,0 +1,25 @@
+﻿@{
+    <h3>Notlar</h3>
+
+    foreach (Not not in ViewBag.Notlar)
+    { <table class="table table-bordered">
+
+            <thead>
+                <tr>
+                    <th scope="col">Öğrenci Id</th>
+                    <td>@not.OgrenciId</td>
+                    <th scope="col">Ders Id</th>
+                    <td>@not.DersId</td>
+                    <th scope="col">Vize Puanı</th>
+                    <td>@not.VizeN</td>
+                    <th scope="col">Final Puanı</th>
+                    <td>@not.FinalN</td>
+                </tr>
+            </thead>
+        </table>
+
+
+
+    }
+}
+

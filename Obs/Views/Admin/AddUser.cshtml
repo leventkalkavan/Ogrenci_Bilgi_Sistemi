@@ -1,0 +1,52 @@
+﻿@using Obs.Controllers
+
+@{
+    Layout = "_AdminLayout";
+    ViewData["Title"] = "Yeni Öğrenci Ekle";
+}
+
+@model UserRegisterForm
+
+@{
+    if (ViewBag.ErrorMessages != null)
+    {
+        foreach (string ErrorMessage in ViewBag.ErrorMessages)
+        {
+            <div class="alert alert-danger" role="alert">
+                @ErrorMessage
+            </div>
+        }
+    }
+}
+<center>
+    <div class="bg-white w-50 shadow p-3">
+
+        <h3 class="text-center">Öğrenci Ekle</h3>
+        <form asp-controller="Admin" asp-action="AddUser">
+
+            <div class="form-group">
+                <label for="inputUserName" class="font-weight-bold">Öğrenci Adı</label>
+                <input type="text" class="form-control" asp-for=UserName id="inputUserName" requried>
+            </div>
+            <div class="form-group">
+                <label for="inputUserName" class="font-weight-bold">Numarası</label>
+                <input type="text" class="form-control" asp-for=Number id="inputNumber" requried>
+            </div>
+            <div class="form-group">
+                <label for="inputUserName" class="font-weight-bold">Şifre</label>
+                <input type="text" class="form-control" asp-for=Password id="inputPassword" requried>
+            </div>
+            <div class="form-group">
+                <label for="inputUserName" class="font-weight-bold">Bölüm ID</label>
+                <input type="number" class="form-control" asp-for=BolumId id="inputBolum" requried>
+            </div>
+            <div class="form-group">
+                <label for="inputUserName" class="font-weight-bold">Kayıt Olduğu Dönem ID</label>
+                <input type="number" class="form-control" asp-for=YariyilId id="İnputKayit" requried>
+            </div>
+
+            <button type="submit" class="btn btn-success w-10"><h3>Ekle</h3></button>
+        </form>
+
+</div>
+</center>

@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h3>Öğrenciler</h3>
+@foreach (User ogrenci in ViewBag.Ogrenciler)
+{<table class="table table-bordered">
+
+    <thead>
+        <tr>
+            <th scope="col">Öğrenci Id</th>
+            <td>@ogrenci.Id</td>
+            <th scope="col">Öğrenci Adı</th>
+            <td>@ogrenci.Name</td>
+            <th scope="col">Numara</th>
+            <td>@ogrenci.Number</td>
+            <th scope="col">Şifre</th>
+            <td>@ogrenci.Password</td>
+            <th scope="col">Bölüm</th>
+            <td>@ogrenci.Bolum.Name</td>
+            <th scope="col">Kayıt Olduğu Dönem Id</th>
+            <td>@ogrenci.YariyilId</td>
+        </tr>
+    </thead>
+</table>
+        }

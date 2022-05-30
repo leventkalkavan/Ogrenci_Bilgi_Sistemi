@@ -1,0 +1,22 @@
+﻿
+@{
+    <h3>Bölümler</h3>
+ foreach (Bolum bolum in ViewBag.Bolumler)
+    { <table class="table table-bordered">
+
+            <thead>
+                <tr>
+                    <th scope="col">Bolum Id</th>
+                    <td>@bolum.Id</td>
+                    <th scope="col">Bölüm Adı</th>
+                    <td>@bolum.Name</td>
+
+</thead>
+        </table>
+
+    }
+}
+
+
+
+

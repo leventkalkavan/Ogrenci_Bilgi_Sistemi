@@ -1,0 +1,47 @@
+﻿@using Obs.Controllers
+
+@{ Layout = "_AdminLayout";
+    ViewData["Title"] = "Yeni Not Ekle"; }
+
+@model AddNotForm
+
+@{ if (ViewBag.ErrorMessages != null)
+    {
+        foreach (string ErrorMessage in ViewBag.ErrorMessages)
+        {
+<div class="alert alert-danger" role="alert">
+    @ErrorMessage
+</div> }
+} }
+<center>
+    <div class="bg-white w-50 shadow p-3">
+        <h3 class="text-center">Not Ekle</h3>
+        <form asp-controller="Admin" asp-action="AddNot">
+
+            <div class="form-group">
+                <label for="inputName" class="font-weight-bold">Öğrenci Id</label>
+                <input type="number" class="form-control" asp-for=OgrenciId id="inputName" requried>
+            </div>
+
+            <div class="form-group">
+                <label for="inputName" class="font-weight-bold">Ders Id</label>
+                <input type="number" class="form-control" asp-for=DersId id="inputName" requried>
+            </div>
+            <div class="form-group">
+                <label for="inputName" class="font-weight-bold">Vize Notu</label>
+                <input type="text" class="form-control" asp-for=VizeN id="inputName" requried>
+            </div>
+            <div class="form-group">
+                <label for="inputName" class="font-weight-bold">Final Notu</label>
+                <input type="text" class="form-control" asp-for=FinalN id="inputName" requried>
+            </div>
+            <button type="submit" class="btn btn-success w-10"><h3>Ekle</h3></button>
+        </form>
+    </div>
+</center>
+
+@*
+    // AddNoteForm 
+    OgrenciA => OgrenciId
+    DersA => DersId
+*@

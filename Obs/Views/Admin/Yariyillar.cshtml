@@ -1,0 +1,18 @@
+﻿@{
+    <h3>Dönemler</h3>
+
+    foreach (Yariyil yariyil in ViewBag.Yariyillar)
+    { <table class="table table-bordered">
+    
+    <thead>
+        <tr>
+            <th scope="col">Dönem Id</th>
+            <td>@yariyil.Id</td>
+            <th scope="col">Dönem</th>
+            <td>@yariyil.Name</td>
+        </tr>
+    </thead>
+    </table>
+
+    }
+    }

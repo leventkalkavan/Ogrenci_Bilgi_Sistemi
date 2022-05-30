@@ -1,0 +1,17 @@
+﻿
+@{                <h3>Akademisyenler</h3> foreach (Akademisyen akademisyen in ViewBag.Akademisyenler)
+                { <table class="table table-bordered">
+
+                        <thead>
+                            <tr>
+                                <th scope="col">Akademisyen Id</th>
+                                <td>@akademisyen.Id</td>
+                                <th scope="col">Akademisyen Adı</th>
+                                <td>@akademisyen.Name</td>
+                                <th scope="col">Şifre</th>
+                                <td>@akademisyen.Password</td>
+                                <th scope="col">Bölüm</th>
+                                <td>@akademisyen.Bolum.Name</td>
+                            </tr>
+                        </thead>
+                    </table> } }

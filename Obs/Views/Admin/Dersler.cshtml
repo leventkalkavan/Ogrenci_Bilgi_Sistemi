@@ -1,0 +1,24 @@
+﻿
+@{
+    <h3>Dersler</h3>
+
+    foreach (Ders ders in ViewBag.Dersler)
+    { <table class="table table-bordered">
+
+            <thead>
+                <tr>
+                    <th scope="col">Ders Id</th>
+                    <td>@ders.Id</td>
+                    <th scope="col">Ders Adı</th>
+                    <td>@ders.Name</td>
+                    <th scope="col">Bölüm</th>
+                    <td>@ders.BolumId</td>
+                    <th scope="col">Öğretim Görevlisi Id</th>
+                    <td>@ders.AkademisyenId</td>
+                </tr>
+            </thead>
+        </table>
+
+    }
+}
+

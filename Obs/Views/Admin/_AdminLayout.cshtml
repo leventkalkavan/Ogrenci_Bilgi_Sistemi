@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Kocaeli Üniversitesi</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Admin" asp-action="Index">
+                    <img src="/img/koulogo.png" alt="" style="width: 45px; height: 45px;" />
+                    Kocaeli Üniversitesi Öğrenci Bilgi Sistemi
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+                    <ul class="navbar-nav flex-grow-0">
+                        @{
+
+
+                                        <li class="nav-item">
+                                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Index">Ana Sayfa</a>
+                                        </li>
+
+                                                    @if (ViewBag.UserRole == "Super")
+                                                    {
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bölümler</a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" asp-controller="Admin" asp-action="Bolumler">Bölümler</a>
+                                            </div>
+                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dersler</a>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" asp-controller="Admin" asp-action="Dersler">Dersler</a>
+
+                                                            </div>
+                                                        </li>
+                                                                        <li class="nav-item dropdown">
+                                                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dönemler</a>
+                                                                            <div class="dropdown-menu">
+                                                                                <a class="dropdown-item" asp-controller="Admin" asp-action="Yariyillar">Dönemler</a>
+
+                                                                            </div>
+                                                                        </li>
+                                                                                        <li class="nav-item dropdown">
+                                                                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Notlar</a>
+                                                                                            <div class="dropdown-menu">
+                                                                                                <a class="dropdown-item" asp-controller="Admin" asp-action="Notlar">Notlar</a>
+                                                                                                <a class="dropdown-item" asp-controller="Admin" asp-action="AddNot">Not Ekle</a>
+                                                                                            </div>
+                                                                                        </li>
+                                                                                                        <li class="nav-item dropdown">
+                                                                                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Öğrenciler</a>
+                                                                                                            <div class="dropdown-menu">
+                                                                                                                <a class="dropdown-item" asp-controller="Admin" asp-action="Ogrenciler">Öğrenciler</a>
+
+                                                                                                            </div>
+
+                                                                                                        </li>
+} @if (ViewBag.UserRole == "Ogrenci")
+                                                    {
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bölümler</a>
+                                            <div class="dropdown-menu">
+                                                <a class="dropdown-item" asp-controller="Admin" asp-action="Bolumler">Bölümler</a>
+                                            </div>
+                                        </li>
+                                                        <li class="nav-item dropdown">
+                                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dersler</a>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" asp-controller="Admin" asp-action="Dersler">Dersler</a>
+
+                                                            </div>
+                                                        </li>
+                                                                        <li class="nav-item dropdown">
+                                                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dönemler</a>
+                                                                            <div class="dropdown-menu">
+                                                                                <a class="dropdown-item" asp-controller="Admin" asp-action="Yariyillar">Dönemler</a>
+
+                                                                            </div>
+                                                                        </li>
+                                                                                        <li class="nav-item dropdown">
+                                                                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Notlar</a>
+                                                                                            <div class="dropdown-menu">
+                                                                                                <a class="dropdown-item" asp-controller="Admin" asp-action="Notlar">Notlar</a>
+
+                                                                                            </div>
+                                                                                        </li>
+                                                                                                        <li class="nav-item dropdown">
+                                                                                                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Akademisyenler</a>
+                                                                                                            <div class="dropdown-menu">
+                                                                                                                <a class="dropdown-item" asp-controller="Admin" asp-action="Akademisyenler">Akademisyenler</a>
+                                                                                                            </div>
+                                                                                                        </li>}
+
+                                @if (ViewBag.UserRole == "Admin")
+                                {
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Akademisyenler</a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" asp-controller="Admin" asp-action="Akademisyenler">Akademisyenler</a>
+                            <a class="dropdown-item" asp-controller="Admin" asp-action="AddAkademisyen">Akademisyen Ekle</a>
+                        </div>
+                    </li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Bölümler</a>
+                                        <div class="dropdown-menu">
+                                            <a class="dropdown-item" asp-controller="Admin" asp-action="Bolumler">Bölümler</a>
+                                            <a class="dropdown-item" asp-controller="Admin" asp-action="AddBolum">Bölüm Ekle</a>
+                                        </div>
+                                    </li>
+                                                    <li class="nav-item dropdown">
+                                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dersler</a>
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" asp-controller="Admin" asp-action="Dersler">Dersler</a>
+                                                            <a class="dropdown-item" asp-controller="Admin" asp-action="AddDers">Ders Ekle</a>
+                                                        </div>
+                                                    </li>
+                                                                    <li class="nav-item dropdown">
+                                                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Dönemler</a>
+                                                                        <div class="dropdown-menu">
+                                                                            <a class="dropdown-item" asp-controller="Admin" asp-action="Yariyillar">Dönemler</a>
+                                                                            <a class="dropdown-item" asp-controller="Admin" asp-action="AddDonem">Dönem Ekle</a>
+                                                                        </div>
+                                                                    </li>
+
+                                                                                    <li class="nav-item dropdown">
+                                                                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Notlar</a>
+                                                                                        <div class="dropdown-menu">
+                                                                                            <a class="dropdown-item" asp-controller="Admin" asp-action="Notlar">Notlar</a>
+                                                                                            <a class="dropdown-item" asp-controller="Admin" asp-action="AddNot">Not Ekle</a>
+                                                                                        </div>
+                                                                                    </li>
+                                                                                                    <li class="nav-item dropdown">
+                                                                                                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Öğrenciler</a>
+                                                                                                        <div class="dropdown-menu">
+                                                                                                            <a class="dropdown-item" asp-controller="Admin" asp-action="Ogrenciler">Öğrenciler</a>
+                                                                                                            <a class="dropdown-item" asp-controller="Admin" asp-action="AddUser">Öğrenci Ekle</a>
+
+                                                                                                        </div>
+
+                                                                                                    </li>} }
+
+
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Admin" asp-action="Logout">Çıkış Yap</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid">
+        @RenderBody()
+    </div>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await Component.InvokeAsync("Notyf")
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

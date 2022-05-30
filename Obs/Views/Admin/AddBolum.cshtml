@@ -1,0 +1,28 @@
+﻿@using Obs.Controllers
+
+@{ Layout = "_AdminLayout";
+    ViewData["Title"] = "Yeni Bölüm Ekle"; }
+
+@model AddBolumForm
+
+@{ if (ViewBag.ErrorMessages != null)
+    {
+        foreach (string ErrorMessage in ViewBag.ErrorMessages)
+        {
+<div class="alert alert-danger" role="alert">
+    @ErrorMessage
+</div> }
+} }
+<center>
+    <div class="bg-white w-50 shadow p-3">
+        <h3 class="text-center">Bölüm Ekle</h3>
+        <form asp-controller="Admin" asp-action="AddBolum">
+
+            <div class="form-group">
+                <label for="inputName" class="font-weight-bold">Bölüm Adı</label>
+                <input type="text" class="form-control" asp-for=Name id="inputName" requried>
+            </div>
+            <button type="submit" class="btn btn-success w-10"><h3>Ekle</h3></button>
+        </form>
+    </div>
+</center>
