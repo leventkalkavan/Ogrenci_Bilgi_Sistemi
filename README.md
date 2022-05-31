@@ -1,2 +1,2 @@
-# Obs
- 
+## Mvc ile geliştirdiğim ilk proje: Öğrenci Bilgi Sistemi
+Projede Öğrenci İşleri(admin), Akademisyen(super), Öğrenci(ogrenci) olmak üzere üç farklı kullanıcı profili var. Öğrenci İşleri, akademisyen ekleme-listeleme, bölüm ekleme-listeleme, ders ekleme-listeleme, dönem ekleme-listeleme, not ekleme-listeleme, öğrenci ekleme-listeme yapabilmektedir. Akademisyen, bölüm listeleme, ders listeleme, dönem listeleme, not ekleme-listeleme, öğrenci listeme yapabilmektedir. Öğrenci, bölüm listeleme, ders listeleme, dönem listeleme, not listeleme, akademisyen listeleme yapabilmektedir.
