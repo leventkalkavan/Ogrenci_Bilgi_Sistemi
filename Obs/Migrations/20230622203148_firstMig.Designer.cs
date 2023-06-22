@@ -10,8 +10,8 @@ using Obs;
 namespace Obs.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20220529124451_update1")]
-    partial class update1
+    [Migration("20230622203148_firstMig")]
+    partial class firstMig
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

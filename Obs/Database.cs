@@ -27,7 +27,7 @@ namespace Obs
              * bu yorum satýrýný açmayý açtýktan sonra MyDatabase yerine
              * kendi kullanacaðýnýz database ismini yazmayý unutmayýn!
              */
-            optionsBuilder.UseSqlServer("Server=.;Database=ObsDatabase;Integrated Security=True;");
+            optionsBuilder.UseSqlServer("Server=.;Database=MyDatabaseTu;Integrated Security=True;");
             base.OnConfiguring(optionsBuilder);
         }
 

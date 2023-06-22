@@ -12,7 +12,6 @@ namespace Obs.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public int BolumId { get; set; }
-       
         public int AkademisyenId { get; set; }
        
 

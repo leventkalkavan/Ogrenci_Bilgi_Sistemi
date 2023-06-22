@@ -171,7 +171,7 @@ namespace Obs.Controllers
             };
             AppRole adminRole = new AppRole
             {
-                Name = "Admin"
+                Name = "Super"
             };
             IdentityResult adminRoleResult = await roleManager.CreateAsync(adminRole);
             if (adminRoleResult.Succeeded)
@@ -186,6 +186,7 @@ namespace Obs.Controllers
 
             return Json("Kayit Basarisiz");
         }
+
         [AllowAnonymous]
         public async Task<JsonResult> Akademisyen()
         {
@@ -196,7 +197,7 @@ namespace Obs.Controllers
             };
             AppRole adminRole = new AppRole
             {
-                Name = "Super"
+                Name = "Admin"
             };
             IdentityResult adminRoleResult = await roleManager.CreateAsync(adminRole);
             if (adminRoleResult.Succeeded)
@@ -509,6 +510,7 @@ namespace Obs.Controllers
         {
             using (var db = new DatabaseContext())
             {
+
                 ViewBag.Dersler = db.Dersler.ToList();
                
             }
